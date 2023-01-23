@@ -16,10 +16,6 @@ sourceSets {
     }
 }
 
-dependencies {
-
-}
-
 test {
     useJUnitPlatform()
 }
