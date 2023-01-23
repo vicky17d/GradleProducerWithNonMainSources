@@ -1,0 +1,4 @@
+rootProject.name = 'GradleProducerWithNonMainSources'
+include 'producer'
+include 'consumer'
+
