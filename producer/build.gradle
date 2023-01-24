@@ -14,8 +14,24 @@ sourceSets {
         java {
         }
     }
+    main {
+        compileClasspath += files(foo.output.classesDirs)
+    }
 }
+
+classes.dependsOn fooClasses
 
 test {
     useJUnitPlatform()
+}
+
+
+// Add src/foo/java to sourceSets  and then it will be available in Main in the consumer
+// So you cannot really export a new sourceset. the only way it can be exported is by adding its srcDir to the main sourceSet
+sourceSets {
+    main {
+        java {
+            srcDir "src/foo/java"
+        }
+    }
 }

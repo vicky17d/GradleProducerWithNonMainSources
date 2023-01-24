@@ -12,5 +12,17 @@ import org.example.MainApi; // <-- Resolved
 import org.example.FooApi;  // <-- NOT resolved
 ```
 
+### Resolved 
+Resolved after adding the following to the producer's build.gradle
+```
+sourceSets {
+    main {
+        java {
+            srcDir "src/foo/java"
+        }
+    }
+}
+```
+
 Also, the shortcut to add dependency does not work
 ![img.png](img.png)
